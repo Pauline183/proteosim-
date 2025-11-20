@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Proteosim Course Package"
+version = "0.1.0"
+description = "This repository contains a complete in-silico LC-MS/MS simulation workflow implemented in Python." 
+
+
+readme = "README.md"
+license = { text = " Apache 2.0" }
+authors = [{ name = "Pauline Kipp, Pauline.kipp@stud.uni-heidelberg.de" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pytest", 
+    "numpy",
+    "pandas", 
+    "matplotlib", 
+    "pyteomics"
+]
+
+[tool.setuptools.packages.find]
+include = ["Proteosim Course Package"]
