@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: Proteosim
+Version: 0.1.0
+Summary: This repository contains a complete in-silico LC-MS/MS simulation workflow implemented in Python.
+Author: Pauline Kipp, Pauline.kipp@stud.uni-heidelberg.de
+License:  Apache 2.0
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pytest
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: pyteomics
+Dynamic: license-file
+
+# proteosim-
+Short workflow for proteomics
+Proteosim Course Package
