@@ -1,4 +1,4 @@
-import proteosim as ps
+from proteosim.protein_digestion import enzyme_cleavage_patterns, digest_protein_collection, compute_sequence_coverage
 
 def test_digest_protein_collection():
     # 1. Sehr einfache Test-Proteine mit klaren K/R-Positionen
@@ -10,10 +10,10 @@ def test_digest_protein_collection():
     }
 
     # 2. Trypsin-Spaltmuster verwenden
-    cleave_pattern = ps.enzyme_cleavage_patterns["Trypsin"]
+    cleave_pattern = enzyme_cleavage_patterns["Trypsin"]
 
     # 3. Funktion aufrufen
-    digested = ps.digest_protein_collection(
+    digested = digest_protein_collection(
         dummy_proteins,
         cleave_pattern=cleave_pattern,
         min_pep_len=1,
@@ -38,7 +38,7 @@ def test_compute_sequence_coverage():
     dummy_peps = ["ABC", "FGH"]
     
     # Call the function
-    coverage = ps.compute_sequence_coverage(dummy_prot_seq, dummy_peps)
+    coverage = compute_sequence_coverage(dummy_prot_seq, dummy_peps)
     
     # ABC covers positions 0,1,2
     # FGH covers positions 5,6,7
