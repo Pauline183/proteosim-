@@ -1,1 +1,5 @@
 from.file_handling import read_fasta
+from.protein_digestion import digest_protein_sequence
+from.protein_digestion import digest_protein_collection
+from.protein_digestion import compute_sequence_coverage
+from.protein_digestion import enzyme_cleavage_patterns
