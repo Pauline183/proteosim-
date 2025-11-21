@@ -20,8 +20,8 @@ def test_digest_protein_collection():
         min_pep_len=1,
         max_pep_len=50,
     )
-    
 
+    print(digested)
     # 4. Erwartete Peptid-Listen prüfen
 
     # "AKRQ"   -> Trypsin schneidet hinter K und R:
@@ -30,7 +30,7 @@ def test_digest_protein_collection():
 
     # "AKPRA" -> K vor P: HIER KEIN SCHNITT; aber hinter R wird geschnitten:
     #  "AKP" | "RA"
-    assert digested["P2"] == ["AKP", "RA"]
+    assert digested["P2"] == ["AKPR", "A"]
 
 def test_compute_sequence_coverage():
  # Dummy protein sequence (10 amino acids)
