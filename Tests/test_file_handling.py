@@ -1,4 +1,4 @@
-from Proteosim.file_handling import read_fasta
+from proteosim.file_handling import read_fasta
 def test_read_fasta():
     tmp_fasta_path = 'data/dummy_proteins.fasta'
     protein_map = read_fasta(tmp_fasta_path)
