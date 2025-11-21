@@ -3,3 +3,8 @@ from.protein_digestion import digest_protein_sequence
 from.protein_digestion import digest_protein_collection
 from.protein_digestion import compute_sequence_coverage
 from.protein_digestion import enzyme_cleavage_patterns
+from.liquid_chromatography import predict_lc_retention_times
+from.liquid_chromatography import plot_retention_time
+from.liquid_chromatography import select_retention_time_window  
+from.mass_spectra_simulation import calculate_mol_mass
+from.mass_spectra_simulation import (calculate_mol_mass_collection, amino_acid_mass_dalton, calculate_mz_collection, fragment_peptide, plot_spectrum)
