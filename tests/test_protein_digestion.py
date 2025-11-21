@@ -19,6 +19,7 @@ def test_digest_protein_collection():
         min_pep_len=1,
         max_pep_len=50,
     )
+    return digested
 
     # 4. Erwartete Peptid-Listen prüfen
 
@@ -47,6 +48,7 @@ def test_compute_sequence_coverage():
     
     # Check if the result matches exactly
     assert coverage == expected_coverage, f"Expected {expected_coverage}, got {coverage}"
+    return coverage
 
 
 
