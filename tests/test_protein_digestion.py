@@ -1,4 +1,5 @@
 from proteosim.protein_digestion import enzyme_cleavage_patterns, digest_protein_collection, compute_sequence_coverage
+import re
 
 def test_digest_protein_collection():
     # 1. Sehr einfache Test-Proteine mit klaren K/R-Positionen

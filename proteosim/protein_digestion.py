@@ -22,6 +22,7 @@ def digest_protein_sequence(protein_seq, cleave_pattern):
 
     """
     peptides = re.split(cleave_pattern, protein_seq)
+    return peptides
     
 
 def digest_protein_collection(protein_map, cleave_pattern, min_pep_len=5, max_pep_len=30):
@@ -63,6 +64,8 @@ def digest_protein_collection(protein_map, cleave_pattern, min_pep_len=5, max_pe
             # Filter peptides by length
         filtered = [pep for pep in peptides if min_pep_len <= len(pep) <= max_pep_len]
         digested[protein_id] = filtered
+    return digested
+
 
 
 def compute_sequence_coverage(protein_seq, peptides):
@@ -77,6 +80,8 @@ def compute_sequence_coverage(protein_seq, peptides):
         if start != -1:
             for i in range(start, start + len(pep)):
                 covered.add(i)
+
+    return len(covered) / len(protein_seq) * 100
  
 enzyme_cleavage_patterns = {
     'LysC': r'(?<=K)',
